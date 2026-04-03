@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3 - Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans text-gray-400">
+    <header id="header">
+      <div class="bg-black p-4">
+        <nav class="flex flex-row justify-between items-center">
+          <!-- jadi sejajar di sini: logo Tech default, icon Burger Menu, Menu Mobile SAAT CLICKING (isinya ada logo Tech + lambang Close && logo tech + isi burger menu ) -->
+
+          <!-- logo Tech default -->
+          <a href="#">
+            <h2 class="text-2xl font-bold text-white sm:hidden">Tech.</h2></a
+          >
+          <!-- burger menu -->
+          <input type="checkbox" id="menu-toggle" class="peer hidden" />
+          <label for="menu-toggle" class="w-6 h-6">
+            <ion-icon
+              name="menu-outline"
+              class="w-6 h-6 text-white sm:hidden"
+            ></ion-icon>
+          </label>
+
+          <!-- Menu Mobile SAAT CLICKING, knp bukan ditengah? karena absolute membuatnya di luar flow jd nda perlu atur ke tengah -->
+          <div
+            class="bg-black w-full h-screen p-4 absolute top-0 left-0 hidden peer-checked:block sm:static sm:block sm:h-fit"
+          >
+            <!-- Logo tech + lambang close -->
+            <div
+              class="flex flex-row justify-between items-center mb-5 sm:hidden"
+            >
+              <a href="#">
+                <h2 class="text-2xl font-bold text-white">Tech.</h2></a
+              >
+              <!-- lambang close -->
+              <input type="checkbox" id="menu-toggle" class="hidden" />
+              <label for="menu-toggle" class="w-6 h-6">
+                <ion-icon
+                  name="close-outline"
+                  class="w-6 h-6 text-white sm:hidden"
+                ></ion-icon>
+              </label>
+            </div>
+
+            <!-- logo tech + isi burger menu -->
+            <div
+              class="flex flex-col text-xs text-white sm:flex sm:flex-row sm:justify-between sm:items-center"
+            >
+              <a href="#">
+                <h2 class="text-2xl font-bold text-white hidden sm:block">
+                  Tech.
+                </h2></a
+              >
+              <ul
+                class="flex flex-col gap-4 text-xs leading-7 sm:flex sm:flex-row sm:justify-between sm:gap-10"
+              >
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#team">Team</a></li>
+              </ul>
+              <a
+                class="py-3 block bg-violet-900 rounded-2xl text-center mt-3 text-xs font-semibold text-white sm:mt-0 sm:py-2 sm:px-7"
+                href="#contact"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <div
+          class="grid grid-cols-1 bg-gradient-to-b from-black to-indigo-950 px-5 py-10 sm:grid sm:grid-cols-2 sm:px-10 sm:py-0 sm:pt-10 sm:items-center md:px-20 lg:px-40"
+        >
+          <div
+            class="flex flex-col items-start sm:relative sm:pb-10 sm:-ml-1 sm:z-1 sm:left-10 md:-ml-10"
+          >
+            <h1 class="font-bold text-4xl mb-4 text-white md:text-5xl">
+              Build with the <span class="italic">Future.</span>
+            </h1>
+            <p class="text-sm mb-6 md:text-base lg:w-130">
+              From building sleek websites and mobile apps to integrating AI
+              solutions, we help brands turn ideas into powerful digital
+              experiences that connect, engage, and scale.
+            </p>
+            <a
+              class="text-xs text-center block bg-violet-900 min-w-full py-3 rounded-2xl text-white sm:min-w-0 sm:py-2 sm:px-22 sm:inline-block md:text-sm"
+              href="#contact"
+              >Let's Talk</a
+            >
+          </div>
+          <div>
+            <img
+              class="relative top-10 sm:top-0 lg:ml-10"
+              src="../../assets/images/hand.png"
+              alt="Tech. Application in your hand"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="bg-section">
+          <h2 class="h2-set">Who We Are</h2>
+          <p class="text-base text-center md:text-lg">
+            We're a group of tech students trained in
+            <span class="text-white"
+              >building real-world digital products.</span
+            >
+            From coding to design, we
+            <span class="text-white"
+              >craft modern solutions for modern problems.</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="service">
+        <div class="bg-section">
+          <div class="mb-6">
+            <h2 class="h2-set">What We Do</h2>
+            <p class="h2-p">
+              We offer simple tech solutions to help your ideas grow.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="service-card">
+              <img
+                class="w-12 h-12"
+                src="../../assets/icons/web.svg"
+                alt="web dev. icon"
+              />
+              <div>
+                <h3 class="service-card-h3">Web Development</h3>
+                <p class="service-card-p">
+                  Modern websites using HTML, CSS, JavaScript, and frameworks.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                class="w-12 h-12"
+                src="../../assets/icons/mobile.svg"
+                alt="app dev. icon"
+              />
+              <div>
+                <h3 class="service-card-h3">App Development</h3>
+                <p class="service-card-p">
+                  Mobile and desktop apps tailored for your needs
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                class="w-12 h-12"
+                src="../../assets/icons/ai.svg"
+                alt="AI icon"
+              />
+              <div>
+                <h3 class="service-card-h3">AI Integration</h3>
+                <p class="service-card-p">
+                  Smart solutions using AI-powered tools and automation.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div>
+                <img
+                  class="w-12 h-12"
+                  src="../../assets/icons/uiux.svg"
+                  alt="ui/ux icon"
+                />
+              </div>
+              <div>
+                <h3 class="service-card-h3">UI/UX Design</h3>
+                <p class="service-card-p">
+                  Clean and functional designs for better user experience.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                class="w-12 h-12"
+                src="../../assets/icons/landingpage.svg"
+                alt="landing page icon"
+              />
+              <div>
+                <h3 class="service-card-h3">Landing Page Design</h3>
+                <p class="service-card-p">
+                  High-converting landing pages for your product or business.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                class="w-12 h-12"
+                src="../../assets/icons/cms.svg"
+                alt="cms icon"
+              />
+              <div>
+                <h3 class="service-card-h3">CMS Integration</h3>
+                <p class="service-card-p">
+                  Easy-to-manage websites with WordPress or Webflow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="bg-section">
+          <div class="mb-6">
+            <h2 class="h2-set">Our Work</h2>
+            <p class="h2-p">See what we've built with passion and purpose</p>
+          </div>
+          <div
+            class="grid grid-cols-1 gap-5 justify-items-center lg:grid-cols-3 lg:gap-0"
+          >
+            <figure>
+              <img
+                src="../../assets/images/portofolio1.png"
+                alt="first portofolio"
+                class="mb-3 w-full max-w-70"
+              />
+              <figcaption class="text-sm text-white font-bold">
+                Portofolio 1
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../../assets/images/portofolio2.png"
+                alt="second portofolio"
+                class="mb-3 w-full max-w-70"
+              />
+              <figcaption class="text-sm text-white font-bold">
+                Portofolio 2
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../../assets/images/portofolio3.png"
+                alt="third portofolio"
+                class="mb-3 w-full max-w-70"
+              />
+              <figcaption class="text-sm text-white font-bold">
+                Portofolio 3
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <div class="bg-section">
+          <div>
+            <h2 class="h2-set">Meet the Team</h2>
+            <p class="h2-p">A group of future-ready tech makers.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8 sm:grid-cols-4">
+            <div class="flex flex-col text-center">
+              <img
+                class="mb-3"
+                src="../../assets/images/jasperkim.png"
+                alt="Jasper Kim"
+              />
+              <h3 class="team-h3">Jasper Kim</h3>
+              <p class="team-p">Project Manager</p>
+            </div>
+            <div class="flex flex-col text-center">
+              <img
+                class="mb-3"
+                src="../../assets/images/alexjonathan.png"
+                alt="Alex Jonathan"
+              />
+              <h3 class="team-h3">Alex Jonathan</h3>
+              <p class="team-p">Full-stack Developer</p>
+            </div>
+            <div class="flex flex-col text-center">
+              <img
+                class="mb-3"
+                src="../../assets/images/mariolopez.png"
+                alt="Mario Lopez"
+              />
+              <h3 class="team-h3">Mario Lopez</h3>
+              <p class="team-p">UI/UX Designer</p>
+            </div>
+            <div class="flex flex-col text-center">
+              <img
+                class="mb-3"
+                src="../../assets/images/jesperjong.png"
+                alt="Jesper Jong"
+              />
+              <h3 class="team-h3">Jesper Jong</h3>
+              <p class="team-p">Data Scientist</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="bg-section mx-auto">
+          <div class="mb-6">
+            <h2 class="h2-set">Let's Collaborate</h2>
+            <p class="h2-p">Need a tech team? We're ready to help</p>
+          </div>
+          <div class="flex flex-col">
+            <form class="w-full mx-auto max-w-md">
+              <div>
+                <label
+                  class="text-sm leading-relaxed text-white block mb-1"
+                  for="name"
+                  >Name</label
+                >
+                <input
+                  class="border border-gray-800 rounded block w-full h-12 mb-4"
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-sm leading-relaxed text-white block mb-1"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  class="border border-gray-800 rounded block w-full h-12 mb-4"
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-sm leading-relaxed text-white block mb-1"
+                  for="message"
+                  >Message</label
+                >
+                <input
+                  class="border border-gray-800 rounded block w-full h-33 mb-8"
+                  id="message"
+                  type="text"
+                  placeholder="Enter your message"
+                />
+              </div>
+              <button
+                type="submit"
+                class="text-sm text-center w-full bg-violet-900 py-2 rounded-2xl text-white"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+  <footer id="footer">
+    <div class="text-xs text-center py-6 bg-black border border-gray-800">
+      © 2025 Web Programming Hack. All rights reserved.
+    </div>
+  </footer>
+</html>
